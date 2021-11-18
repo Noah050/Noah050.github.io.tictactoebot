@@ -1,0 +1,119 @@
+.body {
+    width: 101.3%;
+    margin-left: -1.5220700152207vh;
+    margin-top: -1.5220700152207vh;
+    margin-bottom: -1.5220700152207vh;
+    background-image: linear-gradient(0deg, cyan, yellow);
+    height: 100.3vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.p1Div, .p2Div {
+    height: 30.441400304414003vh;
+    width: 60.882800608828006vh;
+    background-color: transparent;
+    border: black solid 0.45662100456621vh;
+    padding: 1.5220700152207vh    ;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+#p1Color, #p2Color {
+    margin-right: 1.5220700152207vh;
+    border-radius: 1.5220700152207vh;
+    background-color: transparent;
+    height: 7.610350076103501vh;
+    width: 45.662100456621005vh;
+}
+.p1Title, .p2Title {
+    border-bottom: solid black 0.30441400304414vh;
+    width: 63.926940639269404vh;
+    padding-bottom: 3.0441400304414vh;
+}
+.subp1Div, .subp2Div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container1 {
+    display: flex;
+    flex-direction: row;
+}
+.reset {
+    border-radius: 0.76103500761035vh;
+    background-color: cyan;
+    color: black;
+    width: 30.441400304414003vh;
+    height: 10vh;
+    border:  solid black 0.30441400304414vh;
+    margin-top: 2.7vh;
+}.playerTurn {
+    padding-top: 3.0441400304414vh    ;
+    margin-bottom: 2.2831050228310503v;
+    text-align: center;
+    font-size: 40px;
+}
+.reset:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+}
+.container {
+display: grid;
+grid-template-areas:
+"square1 square2 square3"
+"square4 square5 square6"
+"square7 square8 square9";
+justify-content: center;
+grid-row-gap: -0.15220700152207vh;
+grid-column-gap: 0px;
+}
+.box {
+width: 14.459665144596652vh;
+height: 14.459665144596652vh;
+background-color: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: solid black 0.45662100456621vh;
+}
+.box:hover {
+    background-color:rgb(0, 0, 0, 0.15)
+}
+h1 {
+    margin: auto;
+}
+.square1 {
+border-top: none;
+border-left: none;
+}
+.square2 {
+border-top: none;
+}
+.square3 {
+border-top: none;
+border-right: none;
+}
+.square4 {
+border-left: none;
+}
+.square5 {
+
+}
+.square6 {
+border-right: none;
+}
+.square7 {
+border-left: none;
+border-bottom: none;
+}
+.square8 {
+border-bottom: none;
+}
+.square9 {
+    border-bottom: none;
+    border-right: none;
+}
+i {
+    font-size: 0px;
+}

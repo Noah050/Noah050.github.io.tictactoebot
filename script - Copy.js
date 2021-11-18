@@ -16,7 +16,7 @@
     function firstTurn() {
         if (gameEnd != true) {
         turn = 1;
-        document.querySelector(".playerTurn").innerHTML = "Its Your Turn";
+        document.querySelector(".playerTurn").innerHTML = "1 Player Mode";
         } 
     }
     function p1Color() {
@@ -54,7 +54,7 @@
         for (i = 0; i < x.length; i++) {
             x[i].style.fontSize = "0px";
         }
-        document.querySelector(".playerTurn").innerHTML = "It's Player 1's Turn (X)";
+        document.querySelector(".playerTurn").innerHTML = "1 Player Mode";
         document.querySelector(".player1Wins").innerHTML = player1Wins + " " + "Wins";
         document.querySelector(".player2Wins").innerHTML = player2Wins + " " + "Wins";
     }
@@ -62,7 +62,7 @@
        if (turn == 1 && gameEnd != true && n1 == 0) {
            document.querySelector(".x1").style.fontSize = "110px";
            turn = 2;
-           n1 = 1;
+           n1 = 5;
        } else if (turn == 2 && gameEnd != true && n1 == 0) {
            document.querySelector(".o1").style.fontSize = "85px";
            turn = 1;
@@ -73,7 +73,7 @@
         if (turn == 1 && gameEnd != true && n2 == 0) {
             document.querySelector(".x2").style.fontSize = "110px";
             turn = 2;
-            n2 = 1;
+            n2 = 5;
         } else if (turn == 2 && gameEnd != true && n2 == 0) {
             document.querySelector(".o2").style.fontSize = "85px";
             turn = 1;
@@ -84,7 +84,7 @@
         if (turn == 1 && gameEnd != true && n3 == 0) {
             document.querySelector(".x3").style.fontSize = "110px";
             turn = 2;
-            n3 = 1;
+            n3 = 5;
         } else if (turn == 2 && gameEnd != true && n3 == 0) {
             document.querySelector(".o3").style.fontSize = "85px";
             turn = 1
@@ -95,7 +95,7 @@
         if (turn == 1 && gameEnd != true && n4 == 0) {
             document.querySelector(".x4").style.fontSize = "110px";
             turn = 2;
-            n4 = 1;
+            n4 = 5;
         } else if (turn == 2 && gameEnd != true && n4 == 0) {
             document.querySelector(".o4").style.fontSize = "85px";
             turn = 1;
@@ -106,7 +106,7 @@
         if (turn == 1 && gameEnd != true && n5 == 0) {
             document.querySelector(".x5").style.fontSize = "110px";
             turn = 2;
-            n5 = 1;
+            n5 = 5;
         } else if (turn == 2 && gameEnd != true && n5 == 0) {
             document.querySelector(".o5").style.fontSize = "85px";
             turn = 1;
@@ -117,7 +117,7 @@
         if (turn == 1 && gameEnd != true && n6 == 0) {
             document.querySelector(".x6").style.fontSize = "110px";
             turn = 2;
-            n6 = 1;
+            n6 = 5;
         } else if (turn == 2 && gameEnd != true && n6 == 0) {
             document.querySelector(".o6").style.fontSize = "85px";
             turn = 1;
@@ -128,7 +128,7 @@
         if (turn == 1 && gameEnd != true && n7 == 0) {
             document.querySelector(".x7").style.fontSize = "110px";
             turn = 2;
-            n7 = 1;
+            n7 = 5;
         } else if (turn == 2 && gameEnd != true && n7 == 0) {
             document.querySelector(".o7").style.fontSize = "85px";
             turn = 1;
@@ -139,7 +139,7 @@
         if (turn == 1 && gameEnd != true && n8 == 0) {
             document.querySelector(".x8").style.fontSize = "110px";
             turn = 2;
-            n8 = 1;
+            n8 = 5;
         } else if (turn == 2 && gameEnd != true && n8 == 0) {
             document.querySelector(".o8").style.fontSize = "85px";
             turn = 1;
@@ -150,7 +150,7 @@
         if (turn == 1 && gameEnd != true && n9 == 0) {
             document.querySelector(".x9").style.fontSize = "110px";
             turn = 2;
-            n9 = 1;
+            n9 = 5;
         } else if (turn == 2 && gameEnd != true && n9 == 0) {
             document.querySelector(".o9").style.fontSize = "85px";
             turn = 1;
@@ -158,7 +158,7 @@
         }
      }
      function winCondition() {
-     if (n1 == 1 && n2 == 1 && n3 == 1 || n4 == 1 && n5 == 1 && n6 == 1 || n7 == 1 && n8 == 1 && n9 == 1 || n1 == 1 && n4 == 1 && n7 == 1 || n2 == 1 && n5 == 1 && n8 == 1 || n3 == 1 && n6 == 1 && n9 == 1 || n1 == 1 && n5 == 1 && n9 == 1 || n3 == 1 && n5 == 1 && n7 == 1) {
+     if (n1 == 5 && n2 == 5 && n3 == 5 || n4 == 5 && n5 == 5 && n6 == 5 || n7 == 5 && n8 == 5 && n9 == 5 || n1 == 5 && n4 == 5 && n7 == 5 || n2 == 5 && n5 == 5 && n8 == 5 || n3 == 5 && n6 == 5 && n9 == 5 || n1 == 5 && n5 == 5 && n9 == 5 || n3 == 5 && n5 == 5 && n7 == 5) {
         document.querySelector(".playerTurn").innerHTML = "Player 1 (X) Has Won";
         gameEnd = true;
          if (player1WinLock == 0) {
@@ -184,6 +184,9 @@
     if (turn == 2 && gameEnd != true) {
         var x = Math.floor((Math.random() * 9) + 1);
         console.log(x);
+
+        if (n1 + n2 + n3 == 10 && n1 == 0) {square1();winCondition();} else if (n1 + n2 + n3 == 10 && n2 == 0) {square2();winCondition();} else if (n1 + n2 + n3 == 10 && n3 == 0) {square3();winCondition();} else if (n4 + n5 + n6 == 10 && n4 == 0) {square4();winCondition();} else if (n4 + n5 + n6 == 10 && n5 == 0) {square5();winCondition();} else if (n4 + n5 + n6 == 10 && n6 == 0) {square6();winCondition();} else if (n7 + n8 + n9 == 10 && n7 == 0) {square7();winCondition();} else if (n7 + n8 + n9 == 10 && n8 == 0) {square8();winCondition();} else if (n7 + n8 + n9 == 10 && n9 == 0) {square9();winCondition();} else if (n1 + n4 + n7 == 10 && n1 == 0) {square1();winCondition();} else if (n1 + n4 + n7 == 10 && n4 == 0) {square4();winCondition();} else if (n1 + n4 + n7 == 10 && n7 == 0) {square7();winCondition();} else if (n2 + n5 + n8 == 10 && n2 == 0) {square2();winCondition();} else if (n2 + n5 + n8 == 10 && n5 == 0) {square5();winCondition();} else if (n2 + n5 + n8 == 10 && n8 == 0) {square8();winCondition();} else if (n3 + n6 + n9 == 10 && n3 == 0) {square3();winCondition();} else if (n3 + n6 + n9 == 10 && n6 == 0) {square6();winCondition();} else if (n3 + n6 + n9 == 10 && n9 == 0) {square9();winCondition();} else if (n1 + n5 + n9 == 10 && n1 == 0) {square1();winCondition();}  else if (n1 + n5 + n9 == 10 && n5 == 0) {square5();winCondition();} else if (n1 + n5 + n9 == 10 && n9 == 0) {square9();winCondition();}  else if (n3 + n5 + n7 == 10 && n3 == 0) {square3();winCondition();}  else if (n3 + n5 + n7 == 10 && n5 == 0) {square5();winCondition();} else if (n3 + n5 + n7 == 10 && n7 == 0) {square7();winCondition();} else {
+
         if (x == 1 && n1 == 0) {square1();winCondition();} else if (x == 1 && n1 != 0) {bot();winCondition();}
         if (x == 2 && n2 == 0) {square2();winCondition();} else if (x == 2 && n2 != 0) {bot();winCondition();}
         if (x == 3 && n3 == 0) {square3();winCondition();} else if (x == 3 && n3 != 0) {bot();winCondition();}
@@ -193,5 +196,6 @@
         if (x == 7 && n7 == 0) {square7();winCondition();} else if (x == 7 && n7 != 0) {bot();winCondition();}
         if (x == 8 && n8 == 0) {square8();winCondition();} else if (x == 8 && n8 != 0) {bot();winCondition();}
         if (x == 9 && n9 == 0) {square9();winCondition();} else if (x == 9 && n9 != 0) {bot();winCondition();}
+        }
       }
 }
